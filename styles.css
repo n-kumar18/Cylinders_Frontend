@@ -133,34 +133,36 @@ button {
 button:hover {
     background-color: #0056b3; /* Darker shade of blue on hover */
 }
+/* Footer styles */
+/* Footer styles */
 .footer {
     text-align: center;
-    padding: 10px;
+    padding: 5px; /* Decreased padding */
     background-color: #007BFF;
+    position: sticky;
+    bottom: 0;
+    height: 40px; /* Decreased height */
+    line-height: 1.5; /* Adjusted line spacing */
   }
-
-  .footer p {
-    margin: 5px 0;
+  
+  .footer p{
     color: #fff;
-  }
-
-  .footer .copyright {
-    font-size: 14px;
+    font-weight: 100;
   }
 
   /* Page container styles */
   .page-container {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Ensure the container takes at least the full viewport height */
-    position: relative;
+    min-height: 100vh;
   }
-
+  
   .container {
-    flex-grow: 1; /* Allow the container to grow and push the footer down */
+    flex-grow: 1;
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
+  
