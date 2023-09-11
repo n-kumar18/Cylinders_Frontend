@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const weight = receiveWeight.value;
 
         // Send data to the server to handle receiving cylinder
-        fetch('/receive-cylinder', {
+        fetch('https://cylinders.onrender.com/receive-cylinder', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const weight = returnWeight.value;
 
         // Send data to the server to handle returning cylinder
-        fetch('/return-cylinder', {
+        fetch('https://cylinders.onrender.com/return-cylinder', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

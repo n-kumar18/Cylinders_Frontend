@@ -116,7 +116,7 @@
       }
 
       // Fetch and display all cylinder records when the page loads
-      fetch('http://127.0.0.1:3000/get-all-cylinders')
+      fetch('https://cylinders.onrender.com/get-all-cylinders')
         .then((response) => response.json())
         .then((data) => {
           const cylindersTable = document.getElementById('cylindersTable');
