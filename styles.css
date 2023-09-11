@@ -1,0 +1,135 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background-color: #007BFF;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+.footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #007BFF;
+    color: #fff;
+}
+
+.logo {
+    max-width: 100px;
+    display: block;
+    margin: 0 auto;
+}
+
+.address {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
+}
+.form {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    display: none; 
+}
+
+button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+p {
+    color: #007BFF;
+    font-weight: bold;
+} 
+
+/* Reset default margin and padding for body and header */
+body,
+header {
+    margin: 0;
+    padding: 0;
+}
+
+/* Center the Cylinder Management System */
+.container {
+    max-width: 800px;
+    margin: 0 auto; /* Center horizontally */
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center; /* Center align the content within the container */
+}
+
+/* Properly justify the buttons */
+button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 10px; /* Add margin for spacing */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker shade of blue on hover */
+}
