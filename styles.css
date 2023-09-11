@@ -133,25 +133,23 @@ button {
 button:hover {
     background-color: #0056b3; /* Darker shade of blue on hover */
 }
-/* Footer styles */
-/* Footer styles */
-/* Footer styles */
-.footer {
-    text-align: center;
-    padding: 12px; /* Decreased padding */
-    background-color: #007BFF;
-    position: sticky;
-    bottom: 0;
-    height: 80px; /* Decreased height */
-    line-height: 0.5; /* Decreased line spacing */
-  }
-  
   
   .footer p{
     color: #fff;
     font-weight: 100;
+    line-height: 1;
   }
 
+  /* Footer styles */
+.footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    position: sticky;
+    bottom: 0;
+  }
+  
   /* Page container styles */
   .page-container {
     display: flex;
@@ -167,3 +165,4 @@ button:hover {
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
+  
