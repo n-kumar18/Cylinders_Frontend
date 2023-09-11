@@ -22,32 +22,40 @@ document.addEventListener('DOMContentLoaded', () => {
         receiveForm.style.display = 'none';
     });
 
-    receiveSubmit.addEventListener('click', () => {
+    receiveSubmit.addEventListener('click', async () =>{
         const serialNo = receiveSerialNo.value;
         const weight = receiveWeight.value;
 
         // Send data to the server to handle receiving cylinder
-        fetch('https://cylinders.onrender.com/receive-cylinder', {
+        await fetch('http://localhost:3000/receive-cylinder', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({ serialNo, weight }),
         })
-        .then((response) => response.json())
+        .then((response) => {
+            // console.log('Response:', response); // Add this line
+            return response.json();
+        })
         .then((data) => {
+            // console.log('Data:', data); // Add this line
             receiveMessage.textContent = data.message;
             receiveSerialNo.value = '';
             receiveWeight.value = '';
+        })
+        .catch((error) => {
+            console.error('Error:', error); // Add this line
         });
+        
     });
 
-    returnSubmit.addEventListener('click', () => {
+    returnSubmit.addEventListener('click', async () => {
         const serialNo = returnSerialNo.value;
         const weight = returnWeight.value;
 
         // Send data to the server to handle returning cylinder
-        fetch('https://cylinders.onrender.com/return-cylinder', {
+        await fetch('http://localhost:3000/return-cylinder', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

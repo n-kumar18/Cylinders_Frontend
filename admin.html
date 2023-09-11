@@ -1,142 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin Panel - Dr B R Ambedkar NIT Jalandhar</title>
     <style>
-        /* Add your custom CSS styling here */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #007BFF;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-        }
-        h1 {
-            font-size: 36px;
-        }
-        h2 {
-            font-size: 24px;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-        th, td {
-            padding: 10px;
-            text-align: center;
-        }
-        th {
-            background-color: #007BFF;
-            color: #fff;
-        }
-        tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
-        tr:hover {
-            background-color: #ddd;
-        }
-        .footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #007BFF;
-            color: #fff;
-        }
-        .logo {
-            max-width: 100px;
-            display: block;
-            margin: 0 auto;
-        }
-        .address {
-            font-size: 14px;
-            text-align: center;
-            margin-top: 10px;
-        }
+      /* Add your custom CSS styling here */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        margin: 0;
+        padding: 0;
+      }
+      header {
+        background-color: #007bff;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+      }
+      h1 {
+        font-size: 36px;
+      }
+      h2 {
+        font-size: 24px;
+      }
+      .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+      th,
+      td {
+        padding: 10px;
+        text-align: center;
+        white-space: nowrap; /* Prevent text from wrapping to the next line */
+      }
+      th {
+        background-color: #007bff;
+        color: #fff;
+      }
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+      tr:hover {
+        background-color: #ddd;
+      }
+      .footer {
+        text-align: center;
+        padding: 10px;
+        background-color: #007bff;
+        color: #fff;
+      }
+      .logo {
+        max-width: 100px;
+        display: block;
+        margin: 0 auto;
+      }
+      .address {
+        font-size: 14px;
+        text-align: center;
+        margin-top: 10px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <img class="logo" src="logo.png" alt="NIT Jalandhar Logo">
-        <h1>Dr B R Ambedkar NIT Jalandhar</h1>
-        <h2>Boys Hostel No. 7 & 7E Mess</h2>
+      <img class="logo" src="logo.png" alt="NIT Jalandhar Logo" />
+      <h1>Dr B R Ambedkar NIT Jalandhar</h1>
+      <h2>Boys Hostel No. 7 & 7E Mess</h2>
     </header>
 
     <div class="container">
-        <h2>View All Cylinders</h2>
-        <table border="2">
-            <thead>
-                <tr>
-                    <th>Sr No</th>
-                    <th>Cylinder No</th>
-                    <th>Receive Date</th>
-                    <th>Received Weight</th>
-                    <th>Return Date</th>
-                    <th>Returned Weight</th>
-                </tr>
-            </thead>
-            <tbody id="cylindersTable">
-                <!-- Cylinder records will be displayed here -->
-            </tbody>
-        </table>
+      <h2>View All Cylinders</h2>
+      <table border="2">
+        <thead>
+          <tr>
+            <th>Sr No</th>
+            <th>Cylinder No</th>
+            <th>Receive Date</th>
+            <th>Received Weight</th>
+            <th>Return Date</th>
+            <th>Returned Weight</th>
+          </tr>
+        </thead>
+        <tbody id="cylindersTable">
+          <!-- Cylinder records will be displayed here -->
+        </tbody>
+      </table>
     </div>
 
     <div class="footer">
-        <p>© 2023 Dr B R Ambedkar NIT Jalandhar</p>
-        <p class="address">Boys Hostel No. 7 & 7E Mess</p>
+      <p>© 2023 Dr B R Ambedkar NIT Jalandhar</p>
+      <p class="address">Boys Hostel No. 7 & 7E Mess</p>
     </div>
     <script>
       // Function to format a timestamp as 'dd-mm-yyyy hh:mm AM/PM'
       function formatDate(timestamp) {
         if (!timestamp) {
-          return 'N/A'; // Display 'N/A' for null dates
+          return "N/A"; // Display 'N/A' for null dates
         }
         const date = new Date(timestamp);
-        const day = String(date.getDate()).padStart(2, '0');
-        const month = String(date.getMonth() + 1).padStart(2, '0');
+        const day = String(date.getDate()).padStart(2, "0");
+        const month = String(date.getMonth() + 1).padStart(2, "0");
         const year = date.getFullYear();
         const hours = date.getHours() % 12 || 12; // Convert to 12-hour format
-        const minutes = String(date.getMinutes()).padStart(2, '0');
-        const ampm = date.getHours() >= 12 ? 'PM' : 'AM';
+        const minutes = String(date.getMinutes()).padStart(2, "0");
+        const ampm = date.getHours() >= 12 ? "PM" : "AM";
 
         return `${day}-${month}-${year} ${hours}:${minutes} ${ampm}`;
       }
 
       // Fetch and display all cylinder records when the page loads
-      fetch('https://cylinders.onrender.com/get-all-cylinders')
+      // Fetch and display all cylinder records when the page loads
+      fetch("http://localhost:3000/get-all-cylinders")
         .then((response) => response.json())
         .then((data) => {
-          const cylindersTable = document.getElementById('cylindersTable');
-          data.forEach((cylinder) => {
-            const row = document.createElement('tr');
+          const cylindersTable = document.getElementById("cylindersTable");
+          data.forEach((cylinder, index) => {
+            // Add an index parameter
+            const row = document.createElement("tr");
             row.innerHTML = `
-              <td>${cylinder.SrNo}</td>
-              <td>${cylinder.CylinderNo}</td>
-              <td>${formatDate(cylinder.ReceiveDate)}</td>
-              <td>${cylinder.ReceivedWeight || 'N/A'}</td>
-              <td>${formatDate(cylinder.ReturnDate)}</td>
-              <td>${cylinder.ReturnedWeight || 'N/A'}</td>
-            `;
+        <td>${index + 1}</td> <!-- Use index + 1 as Sr No. -->
+        <td>${cylinder.CylinderNo}</td>
+        <td>${formatDate(cylinder.ReceiveDate)}</td>
+        <td>${cylinder.ReceivedWeight || "N/A"}</td>
+        <td>${formatDate(cylinder.ReturnDate)}</td>
+        <td>${cylinder.ReturnedWeight || "N/A"}</td>
+      `;
             cylindersTable.appendChild(row);
           });
         })
         .catch((error) => {
-          console.error('Error fetching cylinder data:', error);
+          console.error("Error fetching cylinder data:", error);
         });
     </script>
-</body>
+  </body>
 </html>
-
