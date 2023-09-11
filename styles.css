@@ -133,3 +133,34 @@ button {
 button:hover {
     background-color: #0056b3; /* Darker shade of blue on hover */
 }
+.footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #007BFF;
+  }
+
+  .footer p {
+    margin: 5px 0;
+    color: #fff;
+  }
+
+  .footer .copyright {
+    font-size: 14px;
+  }
+
+  /* Page container styles */
+  .page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the container takes at least the full viewport height */
+    position: relative;
+  }
+
+  .container {
+    flex-grow: 1; /* Allow the container to grow and push the footer down */
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
