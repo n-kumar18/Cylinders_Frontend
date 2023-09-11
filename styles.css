@@ -135,15 +135,17 @@ button:hover {
 }
 /* Footer styles */
 /* Footer styles */
+/* Footer styles */
 .footer {
     text-align: center;
-    padding: 5px; /* Decreased padding */
+    padding: 12px; /* Decreased padding */
     background-color: #007BFF;
     position: sticky;
     bottom: 0;
-    height: 40px; /* Decreased height */
-    line-height: 1.5; /* Adjusted line spacing */
+    height: 80px; /* Decreased height */
+    line-height: 0.5; /* Decreased line spacing */
   }
+  
   
   .footer p{
     color: #fff;
@@ -165,4 +167,3 @@ button:hover {
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
-  
